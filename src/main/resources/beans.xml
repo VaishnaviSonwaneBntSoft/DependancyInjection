@@ -4,12 +4,10 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
  
  
-    <bean id="student" class="com.Student">
+    <bean id="examobj" class="com.Exam"></bean>
+
+    <bean id="student" class="com.Student" autowire="byType">
         <property name="id" value="1"/>
         <property name="name" value="raghavn"/>
-        <property name="exam">
-            <bean class="com.Exam"></bean>
-        </property>
-
     </bean>
 </beans>
